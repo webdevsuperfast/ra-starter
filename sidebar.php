@@ -2,22 +2,22 @@
 /**
  * Sidebar
  *
- * @package      EAStarter
- * @author       Bill Erickson
+ * @package      RA Starter
+ * @author       Rotsen Mark Acob
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
 
-if ( ! function_exists( 'ea_page_layout' ) )
+if ( ! function_exists( 'ra_page_layout' ) )
 	return;
 
-$layout = ea_page_layout();
+$layout = ra_page_layout();
 if ( ! in_array( $layout, array( 'content-sidebar', 'sidebar-content' ) ) )
 	return;
 
-$sidebar = apply_filters( 'ea_sidebar', 'primary-sidebar' );
+$sidebar = apply_filters( 'ra_sidebar', 'primary-sidebar' );
 $display = is_active_sidebar( $sidebar );
-if ( ! apply_filters( 'ea_display_sidebar', $display ) )
+if ( ! apply_filters( 'ra_display_sidebar', $display ) )
 	return;
 
 tha_sidebars_before();

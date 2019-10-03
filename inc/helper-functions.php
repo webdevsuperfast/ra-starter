@@ -2,21 +2,21 @@
 /**
  * Helper Functions
  *
- * @package      EAStarter
- * @author       Bill Erickson
+ * @package      RA Starter
+ * @author       Rotsen Mark Acob
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
 
 // Duplicate 'the_content' filters
 global $wp_embed;
-add_filter( 'ea_the_content', array( $wp_embed, 'run_shortcode' ), 8 );
-add_filter( 'ea_the_content', array( $wp_embed, 'autoembed'     ), 8 );
-add_filter( 'ea_the_content', 'wptexturize'        );
-add_filter( 'ea_the_content', 'convert_chars'      );
-add_filter( 'ea_the_content', 'wpautop'            );
-add_filter( 'ea_the_content', 'shortcode_unautop'  );
-add_filter( 'ea_the_content', 'do_shortcode'       );
+add_filter( 'ra_the_content', array( $wp_embed, 'run_shortcode' ), 8 );
+add_filter( 'ra_the_content', array( $wp_embed, 'autoembed'     ), 8 );
+add_filter( 'ra_the_content', 'wptexturize'        );
+add_filter( 'ra_the_content', 'convert_chars'      );
+add_filter( 'ra_the_content', 'wpautop'            );
+add_filter( 'ra_the_content', 'shortcode_unautop'  );
+add_filter( 'ra_the_content', 'do_shortcode'       );
 
 /**
  * Get the first term attached to post
@@ -26,7 +26,7 @@ add_filter( 'ea_the_content', 'do_shortcode'       );
  * @param int $post_id
  * @return string/object
  */
-function ea_first_term( $taxonomy = 'category', $field = false, $post_id = false ) {
+function ra_first_term( $taxonomy = 'category', $field = false, $post_id = false ) {
 
 	$post_id = $post_id ? $post_id : get_the_ID();
 	$term = false;
@@ -89,7 +89,7 @@ function ea_first_term( $taxonomy = 'category', $field = false, $post_id = false
  * @param bool $conditional, whether to add $optional_class or not
  * @return string $classes
  */
-function ea_class( $base_classes, $optional_class, $conditional ) {
+function ra_class( $base_classes, $optional_class, $conditional ) {
 	return $conditional ? $base_classes . ' ' . $optional_class : $base_classes;
 }
 
@@ -104,7 +104,7 @@ function ea_class( $base_classes, $optional_class, $conditional ) {
  * @param bool $join, whether to join classes (return string) or not (return array)
  * @return string/array $classes
  */
-function ea_column_class( $classes = array(), $current = false, $join = true ) {
+function ra_column_class( $classes = array(), $current = false, $join = true ) {
 
 	if( false === $current )
 		return $classes;
@@ -135,7 +135,7 @@ function ea_column_class( $classes = array(), $current = false, $join = true ) {
  * @param int $image_id
  * @return string $output
  */
-function ea_bg_image_style( $image_id = false, $image_size = 'full' ) {
+function ra_bg_image_style( $image_id = false, $image_size = 'full' ) {
 	if( !empty( $image_id ) )
 		return ' style="background-image: url(' . wp_get_attachment_image_url( $image_id, $image_size ) . ');"';
 }
@@ -152,7 +152,7 @@ function ea_bg_image_style( $image_id = false, $image_size = 'full' ) {
  * to only specify a `$size` parameter in the svg methods.
  *
  */
-function ea_icon( $atts = array() ) {
+function ra_icon( $atts = array() ) {
 
 	$atts = shortcode_atts( array(
 		'icon'	=> false,
@@ -192,7 +192,7 @@ function ea_icon( $atts = array() ) {
  * Has Action
  *
  */
-function ea_has_action( $hook ) {
+function ra_has_action( $hook ) {
 	ob_start();
 	do_action( $hook );
 	$output = ob_get_clean();

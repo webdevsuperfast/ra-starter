@@ -2,8 +2,8 @@
 /**
  * Site Header
  *
- * @package      EAStarter
- * @author       Bill Erickson
+ * @package      RA Starter
+ * @author       Rotsen Mark Acob
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
@@ -24,14 +24,14 @@ if ( function_exists( 'wp_body_open' ) ) {
 }
 tha_body_top();
 echo '<div class="site-container">';
-	echo '<a class="skip-link screen-reader-text" href="#main-content">' . esc_html__( 'Skip to content', 'ea-starter' ) . '</a>';
+	echo '<a class="skip-link screen-reader-text" href="#main-content">' . esc_html__( 'Skip to content', 'ra-starter' ) . '</a>';
 
 	tha_header_before();
 	echo '<header class="site-header" role="banner"><div class="wrap">';
 		tha_header_top();
 
 		echo '<div class="title-area">';
-		$logo_tag = ( apply_filters( 'ea_h1_site_title', false ) || ( is_front_page() && is_home() ) ) ? 'h1' : 'p';
+		$logo_tag = ( apply_filters( 'ra_h1_site_title', false ) || ( is_front_page() && is_home() ) ) ? 'h1' : 'p';
 		echo '<' . $logo_tag . ' class="site-title"><a href="' . esc_url( home_url() ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a></' . $logo_tag . '>';
 		//echo '<p class="site-description">' . get_bloginfo( 'description' ) . '</p>';
 		echo '</div>';

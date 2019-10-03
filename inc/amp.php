@@ -2,8 +2,8 @@
 /**
  * AMP functionality
  *
- * @package      EAStarter
- * @author       Bill Erickson
+ * @package      RA Starter
+ * @author       Rotsen Mark Acob
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
@@ -12,7 +12,7 @@
  * Is AMP?
  * Conditional tag
  */
-function ea_is_amp() {
+function ra_is_amp() {
 	return function_exists( 'is_amp_endpoint' ) && is_amp_endpoint();
 }
 
@@ -24,9 +24,9 @@ function ea_is_amp() {
  * @param string $state   State variable to toggle based on.
  * @return string HTML attributes.
  */
-function ea_amp_class( $default, $active, $state ) {
+function ra_amp_class( $default, $active, $state ) {
 	$output = '';
-	if( ea_is_amp() ) {
+	if( ra_is_amp() ) {
 		$output .= sprintf(
 			' [class]="%s"',
 			esc_attr(
@@ -50,8 +50,8 @@ function ea_amp_class( $default, $active, $state ) {
  * @param array $disable, list of states to disable
  * @return string The 'on' attribute.
  */
-function ea_amp_toggle( $state = '', $disable = array() ) {
-	if( ! ea_is_amp() )
+function ra_amp_toggle( $state = '', $disable = array() ) {
+	if( ! ra_is_amp() )
 		return;
 
 	$settings = sprintf(
@@ -82,7 +82,7 @@ function ea_amp_toggle( $state = '', $disable = array() ) {
  * @param int    $depth          Depth.
  * @return string The class and on attributes.
  */
-function ea_amp_nav_dropdown( $theme_location = false, $depth = 0 ) {
+function ra_amp_nav_dropdown( $theme_location = false, $depth = 0 ) {
 
 	$key = 'nav';
 	if( !empty( $theme_location ) )
@@ -95,5 +95,5 @@ function ea_amp_nav_dropdown( $theme_location = false, $depth = 0 ) {
 	if( 1 < $depth )
 		$key .= 'Depth' . $depth;
 
-	return ea_amp_toggle( $key ) . ea_amp_class( 'submenu-expand', 'expanded', $key );
+	return ra_amp_toggle( $key ) . ra_amp_class( 'submenu-expand', 'expanded', $key );
 }

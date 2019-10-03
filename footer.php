@@ -2,8 +2,8 @@
 /**
  * Site Footer
  *
- * @package      EAStarter
- * @author       Bill Erickson
+ * @package      RA Starter
+ * @author       Rotsen Mark Acob
  * @since        1.0.0
  * @license      GPL-2.0+
 **/

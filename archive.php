@@ -2,8 +2,8 @@
 /**
  * Archive
  *
- * @package      EAStarter
- * @author       Bill Erickson
+ * @package      RA Starter
+ * @author       Rotsen Mark Acob
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
@@ -12,17 +12,17 @@
  * Body Class
  *
  */
-function ea_archive_body_class( $classes ) {
+function ra_archive_body_class( $classes ) {
 	$classes[] = 'archive';
 	return $classes;
 }
-add_filter( 'body_class', 'ea_archive_body_class' );
+add_filter( 'body_class', 'ra_archive_body_class' );
 
 /**
  * Archive Header
  *
  */
-function ea_archive_header() {
+function ra_archive_header() {
 
 	$title = $subtitle = $description = false;
 
@@ -51,11 +51,11 @@ function ea_archive_header() {
 	if( !empty( $subtitle ) )
 		echo '<h4>' . $subtitle . '</h4>';
 	if( ! empty( $description ) )
-		echo '<div class="archive-description">' . apply_filters( 'ea_the_content', $description ) . '</div>';
+		echo '<div class="archive-description">' . apply_filters( 'ra_the_content', $description ) . '</div>';
 	echo '</header>';
 
 }
-add_action( 'tha_content_while_before', 'ea_archive_header' );
+add_action( 'tha_content_while_before', 'ra_archive_header' );
 
 // Build the page
 require get_template_directory() . '/index.php';

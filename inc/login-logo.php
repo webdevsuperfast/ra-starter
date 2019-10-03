@@ -2,8 +2,8 @@
 /**
  * Login Logo
  *
- * @package      EAStarter
- * @author       Bill Erickson
+ * @package      RA Starter
+ * @author       Rotsen Mark Acob
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
@@ -12,17 +12,17 @@
  * Login Logo URL
  *
  */
-function ea_login_header_url( $url ) {
+function ra_login_header_url( $url ) {
     return esc_url( home_url() );
 }
-add_filter( 'login_headerurl', 'ea_login_header_url' );
+add_filter( 'login_headerurl', 'ra_login_header_url' );
 add_filter( 'login_headertext', '__return_empty_string' );
 
 /**
  * Login Logo
  *
  */
-function ea_login_logo() {
+function ra_login_logo() {
 
 	$logo_path = '/assets/images/logo.svg';
 	if( ! file_exists( get_stylesheet_directory() . $logo_path ) )
@@ -45,4 +45,4 @@ function ea_login_logo() {
     </style>
     <?php
 }
-add_action( 'login_head', 'ea_login_logo' );
+add_action( 'login_head', 'ra_login_logo' );

@@ -2,8 +2,8 @@
 /**
  * Search form
  *
- * @package      EAStarter
- * @author       Bill Erickson
+ * @package      RA Starter
+ * @author       Rotsen Mark Acob
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
@@ -14,5 +14,5 @@
 		<span class="screen-reader-text">Search for</span>
 		<input type="search" class="search-field" placeholder="Search&hellip;" value="<?php echo get_search_query(); ?>" name="s" title="Search for" />
 	</label>
-	<button type="submit" class="search-submit"><?php echo ea_icon( array( 'icon' => 'search', 'title' => 'Submit' ) );?></button>
+	<button type="submit" class="search-submit"><?php echo ra_icon( array( 'icon' => 'search', 'title' => 'Submit' ) );?></button>
 </form>

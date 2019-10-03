@@ -1,7 +1,7 @@
 jQuery(function($){
 
 	// Smooth Scroll
-	function ea_scroll( hash ) {
+	function ra_scroll( hash ) {
 		var target = null;
 
 		try {
@@ -29,12 +29,12 @@ jQuery(function($){
 
 	// -- Smooth scroll on pageload
 	if( window.location.hash ) {
-		ea_scroll( window.location.hash );
+		ra_scroll( window.location.hash );
 	}
 	// -- Smooth scroll on click
 	$('a[href*="#"]:not([href="#"]):not(.no-scroll)').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
-			ea_scroll( this.hash );
+			ra_scroll( this.hash );
 		}
 	});
 

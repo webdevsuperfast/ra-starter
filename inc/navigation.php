@@ -2,8 +2,8 @@
 /**
  * Navigation
  *
- * @package      EAStarter
- * @author       Bill Erickson
+ * @package      RA Starter
+ * @author       Rotsen Mark Acob
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
@@ -12,7 +12,7 @@
  * Header Navigation
  *
  */
-function ea_header_navigation() {
+function ra_header_navigation() {
 
 	if( has_nav_menu( 'primary' ) ) {
 		echo '<nav class="nav-primary nav-menu" role="navigation">';
@@ -20,22 +20,22 @@ function ea_header_navigation() {
 		echo '</nav>';
 	}
 }
-add_action( 'tha_header_bottom', 'ea_header_navigation', 12 );
+add_action( 'tha_header_bottom', 'ra_header_navigation', 12 );
 
 /**
  * Mobile Menu
  *
  */
-function ea_mobile_menu() {
+function ra_mobile_menu() {
 	echo '<nav class="nav-mobile">';
 		echo '<button class="mobile-menu-toggle">';
-			echo ea_icon( array( 'icon' => 'menu', 'size' => 14, 'class' => 'menu-open' ) );
-			echo ea_icon( array( 'icon' => 'close', 'size' => 14, 'class' => 'menu-close' ) );
+			echo ra_icon( array( 'icon' => 'menu', 'size' => 14, 'class' => 'menu-open' ) );
+			echo ra_icon( array( 'icon' => 'close', 'size' => 14, 'class' => 'menu-close' ) );
 			echo '<span class="screen-reader-text">Menu</span>';
 		echo '</button>';
 	echo '</nav>';
 }
-add_action( 'tha_header_bottom', 'ea_mobile_menu', 11 );
+add_action( 'tha_header_bottom', 'ra_mobile_menu', 11 );
 
 /**
  * Add a dropdown icon to top-level menu items.
@@ -47,7 +47,7 @@ add_action( 'tha_header_bottom', 'ea_mobile_menu', 11 );
  * @return string Nav menu item start element.
  * Add a dropdown icon to top-level menu items
  */
-function ea_nav_add_dropdown_icons( $output, $item, $depth, $args ) {
+function ra_nav_add_dropdown_icons( $output, $item, $depth, $args ) {
 
 	// Only add class to 'top level' items on the 'primary' menu.
 	if ( ! isset( $args->theme_location ) || 'primary' !== $args->theme_location ) {
@@ -57,7 +57,7 @@ function ea_nav_add_dropdown_icons( $output, $item, $depth, $args ) {
 	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add SVG icon to parent items.
-		$icon = ea_icon( array( 'icon' => 'navigate-down', 'size' => 16 ) );
+		$icon = ra_icon( array( 'icon' => 'navigate-down', 'size' => 16 ) );
 
 		$output .= sprintf(
 			'<span class="submenu-expand" tabindex="-1">%s</span>',
@@ -67,25 +67,25 @@ function ea_nav_add_dropdown_icons( $output, $item, $depth, $args ) {
 
 	return $output;
 }
-add_filter( 'walker_nav_menu_start_el', 'ea_nav_add_dropdown_icons', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'ra_nav_add_dropdown_icons', 10, 4 );
 
 /**
  * Archive Navigation
  *
  */
-function ea_archive_navigation() {
+function ra_archive_navigation() {
 
 	if( ! is_singular() )
 		the_posts_navigation();
 
 }
-add_action( 'tha_content_while_after', 'ea_archive_navigation' );
+add_action( 'tha_content_while_after', 'ra_archive_navigation' );
 
 /**
  * (disabled) Archive Paginated Navigation
  *
  */
-function ea_archive_paginated_navigation() {
+function ra_archive_paginated_navigation() {
 
 	if( is_singular() )
 		return;
@@ -110,4 +110,4 @@ function ea_archive_paginated_navigation() {
 	}
 
 }
-//add_action( 'tha_content_while_after', 'ea_archive_paginated_navigation' );
+//add_action( 'tha_content_while_after', 'ra_archive_paginated_navigation' );

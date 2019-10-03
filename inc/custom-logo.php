@@ -2,8 +2,8 @@
 /**
  * Custom Logo
  *
- * @package      EAStarter
- * @author       Bill Erickson
+ * @package      RA Starter
+ * @author       Rotsen Mark Acob
  * @since        1.0.0
  * @license      GPL-2.0+
 **/
@@ -12,7 +12,7 @@
  * Custom Logo theme support
  *
  */
-function ea_custom_logo_theme_support() {
+function ra_custom_logo_theme_support() {
 
 	add_theme_support(
 		'custom-logo', array(
@@ -23,13 +23,13 @@ function ea_custom_logo_theme_support() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'ea_custom_logo_theme_support' );
+add_action( 'after_setup_theme', 'ra_custom_logo_theme_support' );
 
 /**
  * Customizer CSS
  * @see https://gist.github.com/billerickson/2c9a311dfd0d346cffbdfa448eacc924
  */
-function ea_customizer_css() {
+function ra_customizer_css() {
 
 	$css = false;
 
@@ -44,8 +44,8 @@ function ea_customizer_css() {
 	}
 
 	if( $css ) {
-		wp_add_inline_style( 'ea-style', $css );
+		wp_add_inline_style( 'ra-style', $css );
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'ea_customizer_css' );
+add_action( 'wp_enqueue_scripts', 'ra_customizer_css' );
