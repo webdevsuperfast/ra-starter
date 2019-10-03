@@ -1,0 +1,33 @@
+{
+  "name": "ra-starter",
+  "version": "1.0.0",
+  "description": "WordPress starter theme based on EA Starter by Bill Erickson",
+  "main": "gulpfile.js",
+  "repository": "git@github.com:webdevsuperfast/ra-starter.git",
+  "author": "webdevsuperfast <acob.rotsen@hotmail.com>",
+  "license": "GPLv2",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "fibers": "^4.0.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-changed": "^4.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-wp-pot": "^2.3.5",
+    "jshint": "^2.10.2",
+    "postcss-discard-comments": "^4.0.2",
+    "sass": "^1.22.12"
+  },
+  "dependencies": {
+  }
+}
