@@ -12,7 +12,7 @@
  * Template Parts with Display Posts Shortcode
  * @author Rotsen Mark Acob
  * @see https://www.billerickson.net/template-parts-with-display-posts-shortcode
- *
+ * 
  * @param string $output, current output of post
  * @param array $original_atts, original attributes passed to shortcode
  * @return string $output
