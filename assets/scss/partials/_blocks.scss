@@ -227,7 +227,7 @@ blockquote.wp-block-quote {
 
 	&.is-large,
 	&.is-style-large {
-		margin: calc( 2 * $block-margin ) auto;
+		margin: calc( 2 * #{$block-margin} ) auto;
 
 		p {
 			@include font-sizes( 24px, 36px );
