@@ -8,12 +8,6 @@
  * @license      GPL-2.0+
 **/
 
-/*
-BEFORE MODIFYING THIS THEME:
-Please read the instructions here (private repo): https://github.com/webdevsuperfast/ra-starter/wiki
-Devs, contact me if you need access
-*/
-
 require get_template_directory() . '/inc/tha-theme-hooks.php';
 require get_template_directory() . '/inc/wordpress-cleanup.php';
 require get_template_directory() . '/inc/login-logo.php';
